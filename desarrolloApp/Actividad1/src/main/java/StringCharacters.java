@@ -1,11 +1,11 @@
-import java.util.Scanner;
-
 public class StringCharacters {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Ingrese un texto: ");
-        String texto = scanner.nextLine();
+        String texto = """
+               Este autobús va muy lento, si no acelera llegaré muy tarde a clases y no 
+               podré presentar el examen, el profesor no va a creerme, reprobaré y ¿Qué será de mi? 
+               Ni siquiera es mi culpa, pero todos actuarán como or to take arms against a sea of troubles,
+               asi fuera.""";
 
         int espacios = 0;
         int vocales = 0;
@@ -49,7 +49,6 @@ abstract class EsVocal {
 
     abstract boolean esVocal(char letra);
 }
-
 class VocalA extends EsVocal {
     @Override
     public boolean esVocal(char letra) {
@@ -59,7 +58,6 @@ class VocalA extends EsVocal {
         return siguienteVocal != null && siguienteVocal.esVocal(letra);
     }
 }
-
 class VocalE extends EsVocal {
     @Override
     public boolean esVocal(char letra) {
@@ -69,7 +67,6 @@ class VocalE extends EsVocal {
         return siguienteVocal != null && siguienteVocal.esVocal(letra);
     }
 }
-
 class VocalI extends EsVocal {
     @Override
     public boolean esVocal(char letra) {
@@ -79,7 +76,6 @@ class VocalI extends EsVocal {
         return siguienteVocal != null && siguienteVocal.esVocal(letra);
     }
 }
-
 class VocalO extends EsVocal {
     @Override
     public boolean esVocal(char letra) {
@@ -89,7 +85,6 @@ class VocalO extends EsVocal {
         return siguienteVocal != null && siguienteVocal.esVocal(letra);
     }
 }
-
 class VocalU extends EsVocal {
     @Override
     public boolean esVocal(char letra) {
